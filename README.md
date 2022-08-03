@@ -65,6 +65,7 @@ AirExplorerDecrypter.decrypt(your_input_stream, your_output_stream, "file_passwo
 ```
 
 - Creating an AirExplorerInputStream to wrapper and consume an encrypted stream
+
 ```
 InputStream AirExplorerInputStream = new AirExplorerInputStream(your_input_stream, "file_password")
 ```

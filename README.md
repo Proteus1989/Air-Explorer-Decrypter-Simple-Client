@@ -1,11 +1,10 @@
 [![license: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/Proteus1989/Air-Explorer-Decrypter/blob/master/LICENSE)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Proteus1989/Air-Explorer-Decrypter)](https://github.com/Proteus1989/Air-Explorer-Decrypter/releases/latest)
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.proteus1989/AirExplorerDecrypter.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.proteus1989%22%20AND%20a:%22AirExplorerDecrypter%22)
-[![Github All Releases](https://img.shields.io/github/downloads/Proteus1989/Air-Explorer-Decrypter/total)](https://github.com/Proteus1989/Air-Explorer-Decrypter/releases)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Proteus1989/Air-Explorer-Decrypter-Simple-Client)](https://github.com/Proteus1989/Air-Explorer-Decrypter/releases/latest)
+[![Github All Releases](https://img.shields.io/github/downloads/Proteus1989/Air-Explorer-Decrypter-Simple-Client/total)](https://github.com/Proteus1989/Air-Explorer-Decrypter-Simple-Client/releases)
 
-# Air Explorer Decrypter
+# Air Explorer Decrypter Simple Client
 
-Java library able to decrypt Air Explorer encrypted files. This README includes simple graphic client binaries.
+Java application able to decrypt Air Explorer encrypted files.
 
 ## Getting Started
 

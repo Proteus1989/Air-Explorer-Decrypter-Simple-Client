@@ -1,5 +1,5 @@
 [![license: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/Proteus1989/Air-Explorer-Decrypter/blob/master/LICENSE)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Proteus1989/Air-Explorer-Decrypter-Simple-Client)](https://github.com/Proteus1989/Air-Explorer-Decrypter/releases/latest)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Proteus1989/Air-Explorer-Decrypter-Simple-Client)](https://github.com/Proteus1989/Air-Explorer-Decrypter-Simple-Client/releases/latest)
 [![Github All Releases](https://img.shields.io/github/downloads/Proteus1989/Air-Explorer-Decrypter-Simple-Client/total)](https://github.com/Proteus1989/Air-Explorer-Decrypter-Simple-Client/releases)
 
 # Air Explorer Decrypter Simple Client

@@ -11,67 +11,56 @@ Java library able to decrypt Air Explorer encrypted files. This README includes 
 
 ### Prerequisites
 
-At least, JDK 1.8 is needed.
+Java 17+ is needed.
 
-### GUI Client
+### Usage
 
-To run a GUI client just execute **AirExplorerFileDecrypter-v1.2.jar** file.<br>
-[Download latest GUI client build](https://github.com/Proteus1989/Air-Explorer-Decrypter/releases/download/1.0.0/AirExplorerFileDecrypter-v1.2.jar)
+To run the GUI client just execute the latest version of **AirExplorerDecrypterSimpleClient**.<br>
+[Download the latest build](https://github.com/Proteus1989/Air-Explorer-Decrypter-Simple-Client/releases/latest)
 
-### Library Usage
+<img src="images/main.png" width="500px">
 
-#### Importing the library
+After drag and drop one or more files into the window, the password dialog will appear.
 
-##### Maven
+<img src="images/pass.png" width="300px">
 
+And finally, the file(s) will be processed and decrypted
+
+<img src="images/output.png" width="500px">
+
+#### Command line
+
+Display the help
 ```
-<dependency>
-  <groupId>com.github.proteus1989</groupId>
-  <artifactId>AirExplorerDecrypter</artifactId>
-  <version>2.0.0</version>
-</dependency>
+java AirExplorerDecrypterSimpleClient.jar -jar -h
 ```
-
-##### Gradle
-
 ```
-implementation 'com.github.proteus1989:AirExplorerDecrypter:2.0.0'
+Usage: java AirExplorerDecrypterSimpleClient.jar -jar [-gh]
+       [-o=<outputDirectory>] -p=<password> <file>...
+Decrypts <file> to destination directory (encrypted file directory is chosen by
+default).
+      <file>...   one or more files to decrypt
+  -g, --gui       display the graphical window
+  -h, --help      display this help message
+  -o, --output=<outputDirectory>
+                  the destination folder
+  -p, --password=<password>
+                  the password
+Copyright(c) 2022
 ```
+**Mandatory fields:** the `password` and the `file path(s)`
 
-#### Examples
-
-- Decrypting file name
-
+##### Command line example
 ```
-AirExplorerDecrypter.decryptName("encryptedFileName(.cloudencoded2)", "file_password")
-```
-
-- Decrypting a file
-
-```
-AirExplorerDecrypter.decrypt(new File("file_path"), "file_password")
-```
-
-- Decrypting a file into a specific directory
-
-```
-AirExplorerDecrypter.decrypt(new File("file_path"), new File("dst_folder"), "file_password")
+java AirExplorerDecrypterSimpleClient.jar -jar -p=test file1.cloudencoded file2.cloudencoded
 ```
 
-- Consuming an encrypted input stream, decrypt it and send it to a custom output stream
+<img src="images/console.png" width="500px">
 
+To execute the same command but in the graphical window, just append the `-g` flag.
 ```
-AirExplorerDecrypter.decrypt(your_input_stream, your_output_stream, "file_password")
+java AirExplorerDecrypterSimpleClient.jar -jar -g -p=test file1.cloudencoded file2.cloudencoded
 ```
-
-- Creating an AirExplorerInputStream to wrapper and consume an encrypted stream
-
-```
-InputStream AirExplorerInputStream = new AirExplorerInputStream(your_input_stream, "file_password")
-```
-
-[Download the latest build](https://github.com/Proteus1989/Air-Explorer-Decrypter/releases/latest)
-
 ## Authors
 
 * **Antonio Suárez** - *Initial work and maintainer* - [Proteus1989](https://github.com/Proteus1989)
@@ -85,7 +74,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-MS original PasswordDeriveBytes class contains a nonstandard extension of the PBKDF1 algorithm. Therefore, MS
-PasswordDeriveBytes is different of normal BKDF1.
-Special thanks to **gilchris** for Java PasswordDeriveBytes port. Available
-at https://github.com/gilchris/PasswordDeriveBytesForJava.
+Thanks to **tomas-langer** for [**Chalk**](https://github.com/tomas-langer/chalk), a cross-platform standard output coloring.

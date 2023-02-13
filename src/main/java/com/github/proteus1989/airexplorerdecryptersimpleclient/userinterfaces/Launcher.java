@@ -13,13 +13,10 @@ public class Launcher {
     public static void start(String[] args) {
         CommandLineInterpreter initialConfig = new CommandLineInterpreter();
 
-        if (args.length > 0) {
-            int exitCode = new picocli.CommandLine(initialConfig).setTrimQuotes(true).execute(args);
-            if (exitCode != 0) {
+        int exitCode = new picocli.CommandLine(initialConfig).setTrimQuotes(true).execute(args);
+        if (args.length > 0 && !(initialConfig.isGui() && args.length == 1)) {
+            if (exitCode != 0 || initialConfig.isHelp()) {
                 System.exit(exitCode);
-            }
-            if (initialConfig.isHelp()) {
-                System.exit(0);
             }
         }
 

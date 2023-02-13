@@ -2,16 +2,14 @@ package com.github.proteus1989.airexplorerdecryptersimpleclient.userinterfaces;
 
 import com.github.proteus1989.airexplorerdecryptersimpleclient.utils.FileChecker;
 import lombok.Getter;
-import lombok.extern.java.Log;
 import picocli.CommandLine;
 
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
-@Log
 @Getter
-@CommandLine.Command(name = "java AirExplorerDecrypterSimpleClient.jar -jar", footer = "Copyright(c) 2022",
+@CommandLine.Command(name = "java -jar AirExplorerDecrypterSimpleClient.jar", footer = "Copyright(c) 2022",
         description = "Decrypts <file> to destination directory (encrypted file directory is chosen by default).")
 public class CommandLineInterpreter implements Runnable {
     @CommandLine.Spec
@@ -48,7 +46,9 @@ public class CommandLineInterpreter implements Runnable {
 
     @CommandLine.Parameters(arity = "1..*", description = "one or more files to decrypt")
     private void getFile(String... files) {
-        fileChecker = new FileChecker(Arrays.stream(files).map(File::new));
+        fileChecker = new FileChecker(Arrays.stream(files)
+                .map(File::new)
+                .map(File::getAbsoluteFile));
         this.files = fileChecker.getValidFiles();
     }
 

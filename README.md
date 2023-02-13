@@ -31,10 +31,10 @@ And finally, the file(s) will be processed and decrypted
 
 Display the help
 ```
-java AirExplorerDecrypterSimpleClient.jar -jar -h
+java -jar AirExplorerDecrypterSimpleClient.jar -h
 ```
 ```
-Usage: java AirExplorerDecrypterSimpleClient.jar -jar [-gh]
+Usage: java -jar AirExplorerDecrypterSimpleClient.jar [-gh]
        [-o=<outputDirectory>] -p=<password> <file>...
 Decrypts <file> to destination directory (encrypted file directory is chosen by
 default).
@@ -51,14 +51,14 @@ Copyright(c) 2022
 
 ##### Command line example
 ```
-java AirExplorerDecrypterSimpleClient.jar -jar -p=test file1.cloudencoded file2.cloudencoded
+java -jar AirExplorerDecrypterSimpleClient.jar -p=test file1.cloudencoded file2.cloudencoded
 ```
 
 <img src="images/console.png" width="500px">
 
 To execute the same command but in the graphical window, just append the `-g` flag.
 ```
-java AirExplorerDecrypterSimpleClient.jar -jar -g -p=test file1.cloudencoded file2.cloudencoded
+java -jar AirExplorerDecrypterSimpleClient.jar -g -p=test file1.cloudencoded file2.cloudencoded
 ```
 ## Authors
 

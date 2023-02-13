@@ -5,7 +5,7 @@
     <groupId>com.github.proteus1989</groupId>
     <artifactId>airexplorerdecryptersimpleclient</artifactId>
     <name>Air Explorer Decrypter Simple Client</name>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <packaging>jar</packaging>
 
     <url>https://github.com/Proteus1989/Air-Explorer-Decrypter-Simple-Client</url>
